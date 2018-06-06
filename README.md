@@ -30,16 +30,16 @@ You can use [THIS](./bash-parse-options-blank.sh) blank script, which does not h
 >		Into '### \*\*ADDARG3\*\*' (copy and search)   
 >			example:
 ```bash
-		-h | --help )								#<-- CHANGE HERE - short and long option
-			showHelp=1								#<-- CHANGE HERE - variable for further usage
+		-h | --help )			#<-- CHANGE HERE - short and long option
+			showHelp=1		#<-- CHANGE HERE - variable for further usage
 		;;
 ```   
 > a.2) only short option   
 >		Into '### \*\*ADDARG1\*\*' (copy and search)   
 >			example:   
  ```bash
-		h )											#<-- CHANGE HERE - short option; WARNING - NO DASH
-			showHelp=1								#<-- CHANGE HERE - variable for further usage
+		h )				#<-- CHANGE HERE - short option; WARNING - NO DASH
+			showHelp=1		#<-- CHANGE HERE - variable for further usage
 		;;
 ```   
 > b) With arguments: ( MUST COMPLETE b.1, b.2 AND b.3 )   
@@ -47,14 +47,14 @@ You can use [THIS](./bash-parse-options-blank.sh) blank script, which does not h
 >		Into '### \*\*ADDARG3\*\*' (copy and search)   
 >			example:   
  ```bash
-		-o | --output )								#<-- CHANGE HERE - short and long option
+		-o | --output )					#<-- CHANGE HERE - short and long option
 			if [[ $i -eq $# ]]
 			then
 				echo 'Option: '"$argumentWhole"' requires argument.'
 				exit 5
 			else
 				argumentAwaiting=1
-				argumentInto='o'					#<-- CHANGE HERE - MUST MATCH LETTER IN STEP b.3
+				argumentInto='o'		#<-- CHANGE HERE - MUST MATCH LETTER IN STEP b.3
 			fi
 		;;
 ```   
@@ -62,7 +62,7 @@ You can use [THIS](./bash-parse-options-blank.sh) blank script, which does not h
 >		Into '### \*\*ADDARG4\*\*' (copy and search)   
 >			example:   
 ```bash
-		-o | --output )								#<-- CHANGE HERE - short and long option
+		-o | --output )						#<-- CHANGE HERE - short and long option
 			if [[ -z "$argumentSpecifiedOption" ]]
 			then 
 				echo 'Option '"$argumentSpecified"' requires argument.'
@@ -76,8 +76,8 @@ You can use [THIS](./bash-parse-options-blank.sh) blank script, which does not h
 >		Into '### \*\*ADDARG2\*\*' (copy and search)   
 >			example:   
  ```bash
-		o )											#<-- CHANGE HERE - MUST MATCH LETTER IN STEP b.1
-			output="$argumentWhole"					#<-- CHANGE HERE - variable for further usage
+		o )					#<-- CHANGE HERE - MUST MATCH LETTER IN STEP b.1
+			output="$argumentWhole"		#<-- CHANGE HERE - variable for further usage
 		;;
 ```   
 ## Example
