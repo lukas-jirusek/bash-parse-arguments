@@ -16,36 +16,35 @@ $ ./script.sh (1)-h (1)-v (2)--help (3)-o argument (4)--output argument (5)-o=ar
 > (5) - short option with argument joined with '='   
 > (6) - long option with argument joined with '='   
 > (7) - multiple short options at once (single dash)   
-> (8) - another arguments(s)   
-> Any other arguments is stored in separated array.
+> (8) - another arguments(s) - stored in separated array.
 
 ## Usage:
 To use this way of parsing options and arguments, copy this script at the beginning of your script. Then add your own options as
 as described in next chapter.   
 You can use [THIS](./bash-parse-options-blank.sh) blank script, which does not have any predefined options. [[RAW]](https://raw.githubusercontent.com/lukas-jirusek/bash-parse-options/master/bash-parse-options.sh)
 
-### Adding yout own options:   
-> a) Without argument: ( MUST COMPLETE a.1 AND a.2 )   
-> 	a.1) short and long option   
->		Into '### \*\*ADDARG3\*\*' (copy and search)   
->			example:
+### Adding your own options:   
+1) Options without argument: ( MUST COMPLETE 1.a AND 1.b )   
+1.a) short and long option   
+Into '### \*\*ADDARG3\*\*' add code from example.   
+	example:
 ```bash
 		-h | --help )			#<-- CHANGE HERE - short and long option
 			showHelp=1		#<-- CHANGE HERE - variable for further usage
 		;;
 ```   
-> a.2) only short option   
->		Into '### \*\*ADDARG1\*\*' (copy and search)   
->			example:   
+1.b) only short option   
+Into '### \*\*ADDARG1\*\*' add code from example.    
+	example:   
  ```bash
 		h )				#<-- CHANGE HERE - short option; WARNING - NO DASH
 			showHelp=1		#<-- CHANGE HERE - variable for further usage
 		;;
 ```   
-> b) With arguments: ( MUST COMPLETE b.1, b.2 AND b.3 )   
->	b.1) short and long option   
->		Into '### \*\*ADDARG3\*\*' (copy and search)   
->			example:   
+2) With arguments: ( MUST COMPLETE 2.a, 2.b AND 2.c )   
+2.a) short and long option   
+Into '### \*\*ADDARG3\*\*' add code from example.   
+	example:   
  ```bash
 		-o | --output )					#<-- CHANGE HERE - short and long option
 			if [[ $i -eq $# ]]
@@ -54,13 +53,13 @@ You can use [THIS](./bash-parse-options-blank.sh) blank script, which does not h
 				exit 5
 			else
 				argumentAwaiting=1
-				argumentInto='o'		#<-- CHANGE HERE - MUST MATCH LETTER IN STEP b.3
+				argumentInto='o'		#<-- CHANGE HERE - MUST MATCH LETTER IN STEP 2.c
 			fi
 		;;
 ```   
->	b.2) short and long option   
->		Into '### \*\*ADDARG4\*\*' (copy and search)   
->			example:   
+2.b) short and long option   
+Into '### \*\*ADDARG4\*\*' add code from example.      
+	example:   
 ```bash
 		-o | --output )						#<-- CHANGE HERE - short and long option
 			if [[ -z "$argumentSpecifiedOption" ]]
@@ -72,11 +71,11 @@ You can use [THIS](./bash-parse-options-blank.sh) blank script, which does not h
 			fi
 		;;
 ```   
->	b.3) finishing b.1   
->		Into '### \*\*ADDARG2\*\*' (copy and search)   
->			example:   
+2.c) finishing 2.a   
+Into '### \*\*ADDARG2\*\*' add code from example.     
+	example:   
  ```bash
-		o )					#<-- CHANGE HERE - MUST MATCH LETTER IN STEP b.1
+		o )					#<-- CHANGE HERE - MUST MATCH LETTER IN STEP 2.a
 			output="$argumentWhole"		#<-- CHANGE HERE - variable for further usage
 		;;
 ```   
