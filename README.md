@@ -24,27 +24,27 @@ as described in next chapter.
 You can use [THIS](./bash-parse-options-blank.sh) blank script, which does not have any predefined options. [[RAW]](https://raw.githubusercontent.com/lukas-jirusek/bash-parse-options/master/bash-parse-options.sh)
 
 ### Adding your own options:   
-1) Options without argument: ( MUST COMPLETE 1.a AND 1.b )   
-1.a) short and long option   
+#### 1) Options without argument: ( MUST COMPLETE 1.a AND 1.b )   
+**1.a) short and long option**  
 Into '### \*\*ADDARG3\*\*' add code from example.   
-	example:
+> example:
 ```bash
 	-h | --help )			#<-- CHANGE HERE - short and long option
 		showHelp=1		#<-- CHANGE HERE - variable for further usage
 	;;
 ```   
-1.b) only short option   
+**1.b) only short option**   
 Into '### \*\*ADDARG1\*\*' add code from example.    
-	example:   
+> example:   
  ```bash
 	h )				#<-- CHANGE HERE - short option; WARNING - NO DASH
 		showHelp=1		#<-- CHANGE HERE - variable for further usage
 	;;
 ```   
-2) With arguments: ( MUST COMPLETE 2.a, 2.b AND 2.c )   
-2.a) short and long option   
+#### 2) Options with argument: ( MUST COMPLETE 2.a, 2.b AND 2.c )   
+**2.a) short and long option**   
 Into '### \*\*ADDARG3\*\*' add code from example.   
-	example:   
+> example:   
  ```bash
 	-o | --output )					#<-- CHANGE HERE - short and long option
 		if [[ $i -eq $# ]]
@@ -57,9 +57,9 @@ Into '### \*\*ADDARG3\*\*' add code from example.
 		fi
 	;;
 ```   
-2.b) short and long option   
+**2.b) short and long option**  
 Into '### \*\*ADDARG4\*\*' add code from example.      
-	example:   
+> example:   
 ```bash
 	-o | --output )						#<-- CHANGE HERE - short and long option
 		if [[ -z "$argumentSpecifiedOption" ]]
@@ -71,9 +71,9 @@ Into '### \*\*ADDARG4\*\*' add code from example.
 		fi
 	;;
 ```   
-2.c) finishing 2.a   
+**2.c) finishing 2.a**   
 Into '### \*\*ADDARG2\*\*' add code from example.     
-	example:   
+> example:   
  ```bash
 	o )					#<-- CHANGE HERE - MUST MATCH LETTER IN STEP 2.a
 		output="$argumentWhole"		#<-- CHANGE HERE - variable for further usage
