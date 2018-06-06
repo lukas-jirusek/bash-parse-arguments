@@ -37,47 +37,47 @@ Into '### \*\*ADDARG3\*\*' add code from example.
 Into '### \*\*ADDARG1\*\*' add code from example.    
 	example:   
  ```bash
-		h )				#<-- CHANGE HERE - short option; WARNING - NO DASH
-			showHelp=1		#<-- CHANGE HERE - variable for further usage
-		;;
+	h )				#<-- CHANGE HERE - short option; WARNING - NO DASH
+		showHelp=1		#<-- CHANGE HERE - variable for further usage
+	;;
 ```   
 2) With arguments: ( MUST COMPLETE 2.a, 2.b AND 2.c )   
 2.a) short and long option   
 Into '### \*\*ADDARG3\*\*' add code from example.   
 	example:   
  ```bash
-		-o | --output )					#<-- CHANGE HERE - short and long option
-			if [[ $i -eq $# ]]
-			then
-				echo 'Option: '"$argumentWhole"' requires argument.'
-				exit 5
-			else
-				argumentAwaiting=1
-				argumentInto='o'		#<-- CHANGE HERE - MUST MATCH LETTER IN STEP 2.c
-			fi
-		;;
+	-o | --output )					#<-- CHANGE HERE - short and long option
+		if [[ $i -eq $# ]]
+		then
+			echo 'Option: '"$argumentWhole"' requires argument.'
+			exit 5
+		else
+			argumentAwaiting=1
+			argumentInto='o'		#<-- CHANGE HERE - MUST MATCH LETTER IN STEP 2.c
+		fi
+	;;
 ```   
 2.b) short and long option   
 Into '### \*\*ADDARG4\*\*' add code from example.      
 	example:   
 ```bash
-		-o | --output )						#<-- CHANGE HERE - short and long option
-			if [[ -z "$argumentSpecifiedOption" ]]
-			then 
-				echo 'Option '"$argumentSpecified"' requires argument.'
-				exit 5
-			else
-				output="$argumentSpecifiedOption"	#<-- CHANGE HERE - variable for further usage
-			fi
-		;;
+	-o | --output )						#<-- CHANGE HERE - short and long option
+		if [[ -z "$argumentSpecifiedOption" ]]
+		then 
+			echo 'Option '"$argumentSpecified"' requires argument.'
+			exit 5
+		else
+			output="$argumentSpecifiedOption"	#<-- CHANGE HERE - variable for further usage
+		fi
+	;;
 ```   
 2.c) finishing 2.a   
 Into '### \*\*ADDARG2\*\*' add code from example.     
 	example:   
  ```bash
-		o )					#<-- CHANGE HERE - MUST MATCH LETTER IN STEP 2.a
-			output="$argumentWhole"		#<-- CHANGE HERE - variable for further usage
-		;;
+	o )					#<-- CHANGE HERE - MUST MATCH LETTER IN STEP 2.a
+		output="$argumentWhole"		#<-- CHANGE HERE - variable for further usage
+	;;
 ```   
 ## Example
 [THIS](./bash-parse-option.sh) script parses 4 options: [[RAW]](https://raw.githubusercontent.com/lukas-jirusek/bash-parse-options/master/bash-parse-options.sh)   
