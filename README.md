@@ -9,14 +9,14 @@ $ ./script.sh -h -v --help -o argument --output argument -o=argument --output=ar
 ```bash
 $ ./script.sh (1)-h (1)-v (2)--help (3)-o argument (4)--output argument (5)-o=argument (6)--output=argument (7)-hv
 ```
-(1) - short option (single dash)   
-(2) - long option (double dash)   
-(3) - short option with argument separated with ' '   
-(4) - long option with argument separated with ' '   
-(5) - short option with argument joined with '='   
-(6) - long option with argument joined with '='   
-(7) - multiple short options at once (single dash)   
-Any other arguments is stored in separated array.
+> (1) - short option (single dash)   
+> (2) - long option (double dash)   
+> (3) - short option with argument separated with ' '   
+> (4) - long option with argument separated with ' '   
+> (5) - short option with argument joined with '='   
+> (6) - long option with argument joined with '='   
+> (7) - multiple short options at once (single dash)   
+> Any other arguments is stored in separated array.
 
 ## Usage:
 To use this way of parsing options and arguments, copy this script at the beginning of your script. Then add your own options as
