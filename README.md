@@ -3,11 +3,11 @@
 Processes short and long options with or without arguments.
 ### Accepted formats:   
 ```bash
-$ ./script.sh -h -v --help -o argument --output argument -o=argument --output=argument -hv
+$ ./script.sh -h -v --help -o argument --output argument -o=argument --output=argument -hv another-argument
 ```
 #### Explained:
 ```bash
-$ ./script.sh (1)-h (1)-v (2)--help (3)-o argument (4)--output argument (5)-o=argument (6)--output=argument (7)-hv
+$ ./script.sh (1)-h (1)-v (2)--help (3)-o argument (4)--output argument (5)-o=argument (6)--output=argument (7)-hv (8)another-argument
 ```
 > (1) - short option (single dash)   
 > (2) - long option (double dash)   
@@ -16,6 +16,7 @@ $ ./script.sh (1)-h (1)-v (2)--help (3)-o argument (4)--output argument (5)-o=ar
 > (5) - short option with argument joined with '='   
 > (6) - long option with argument joined with '='   
 > (7) - multiple short options at once (single dash)   
+> (8) - another arguments(s)   
 > Any other arguments is stored in separated array.
 
 ## Usage:
@@ -29,8 +30,8 @@ You can use [THIS](./bash-parse-options-blank.sh) blank script, which does not h
 >		Into '### \*\*ADDARG3\*\*' (copy and search)   
 >			example:
 ```bash
-		-h | --help )														#<-- CHANGE HERE - short and long option
-			showHelp=1														#<-- CHANGE HERE - variable for further usage
+		-h | --help )						#<-- CHANGE HERE - short and long option
+			showHelp=1					#<-- CHANGE HERE - variable for further usage
 		;;
 ```   
 > a.2) only short option   
