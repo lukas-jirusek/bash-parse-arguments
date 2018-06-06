@@ -1,6 +1,6 @@
 # bash-parse-options
 ## Description:   
-Parses short and long options with or without arguments.
+Processes short and long options with or without arguments.
 ### Accepted formats:   
 ```bash
 $ ./script.sh -h -v --help -o argument --output argument -o=argument --output=argument -hv
