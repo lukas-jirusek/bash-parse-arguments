@@ -37,8 +37,8 @@ You can use [THIS](./bash-parse-options-blank.sh) blank script, which does not h
 >		Into '### \*\*ADDARG1\*\*' (copy and search)   
 >			example:   
  ```bash
-		h )																	#<-- CHANGE HERE - short option; WARNING - NO DASH
-			showHelp=1														#<-- CHANGE HERE - variable for further usage
+		h )							#<-- CHANGE HERE - short option; WARNING - NO DASH
+			showHelp=1					#<-- CHANGE HERE - variable for further usage
 		;;
 ```   
 > b) With arguments: ( MUST COMPLETE b.1, b.2 AND b.3 )   
@@ -46,14 +46,14 @@ You can use [THIS](./bash-parse-options-blank.sh) blank script, which does not h
 >		Into '### \*\*ADDARG3\*\*' (copy and search)   
 >			example:   
  ```bash
-		-o | --output )														#<-- CHANGE HERE - short and long option
+		-o | --output )						#<-- CHANGE HERE - short and long option
 			if [[ $i -eq $# ]]
 			then
 				echo 'Option: '"$argumentWhole"' requires argument.'
 				exit 5
 			else
 				argumentAwaiting=1
-				argumentInto='o'											#<-- CHANGE HERE - MUST MATCH LETTER IN STEP b.3
+				argumentInto='o'			#<-- CHANGE HERE - MUST MATCH LETTER IN STEP b.3
 			fi
 		;;
 ```   
@@ -61,13 +61,13 @@ You can use [THIS](./bash-parse-options-blank.sh) blank script, which does not h
 >		Into '### \*\*ADDARG4\*\*' (copy and search)   
 >			example:   
 ```bash
-		-o | --output )														#<-- CHANGE HERE - short and long option
+		-o | --output )						#<-- CHANGE HERE - short and long option
 			if [[ -z "$argumentSpecifiedOption" ]]
 			then 
 				echo 'Option '"$argumentSpecified"' requires argument.'
 				exit 5
 			else
-				output="$argumentSpecifiedOption"							#<-- CHANGE HERE - variable for further usage
+				output="$argumentSpecifiedOption"	#<-- CHANGE HERE - variable for further usage
 			fi
 		;;
 ```   
@@ -75,8 +75,8 @@ You can use [THIS](./bash-parse-options-blank.sh) blank script, which does not h
 >		Into '### \*\*ADDARG2\*\*' (copy and search)   
 >			example:   
  ```bash
-		o )																	#<-- CHANGE HERE - MUST MATCH LETTER IN STEP b.1
-			output="$argumentWhole"											#<-- CHANGE HERE - variable for further usage
+		o )							#<-- CHANGE HERE - MUST MATCH LETTER IN STEP b.1
+			output="$argumentWhole"				#<-- CHANGE HERE - variable for further usage
 		;;
 ```   
 ## Example
@@ -134,7 +134,7 @@ do
 					echo 'Option: '"$argumentPrevious"' requires argument.'
 					exit 5
 				else
-					case "$argumentInto" in								# adds argument to option
+					case "$argumentInto" in			# adds argument to option
 ### **ADDARG2**					FORMAT (3) (4)
 					o )
 						output="$argumentWhole"
@@ -155,13 +155,13 @@ do
 				then
 					case "$argumentWhole" in
 ### **ADDARG3**					FORMAT (1) (2) (3) (4)
-					-h | --help )                                           # without argument
+					-h | --help )				# without argument
 						showHelp=1
 					;;
 					-v | --version )										# without argument
 						showVersion=1
 					;;
-					-o | --output )                                         # with argument
+					-o | --output )				# with argument
 						if [[ $i -eq $# ]]
 						then
 							echo 'Option: '"$argumentWhole"' requires argument.'
@@ -171,7 +171,7 @@ do
 							argumentInto='o'
 						fi
 					;;
-					-t | --text )                                        	# with argument
+					-t | --text )                       	# with argument
 						if [[ $i -eq $# ]]
 						then
 							echo 'Option: '"$argumentWhole"' requires argument.'
