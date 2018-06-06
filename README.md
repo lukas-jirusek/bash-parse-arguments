@@ -29,9 +29,9 @@ You can use [THIS](./bash-parse-options-blank.sh) blank script, which does not h
 Into '### \*\*ADDARG3\*\*' add code from example.   
 	example:
 ```bash
-		-h | --help )			#<-- CHANGE HERE - short and long option
-			showHelp=1		#<-- CHANGE HERE - variable for further usage
-		;;
+	-h | --help )			#<-- CHANGE HERE - short and long option
+		showHelp=1		#<-- CHANGE HERE - variable for further usage
+	;;
 ```   
 1.b) only short option   
 Into '### \*\*ADDARG1\*\*' add code from example.    
