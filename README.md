@@ -1,3 +1,4 @@
+# EDIT: Still works, but slow and huge
 # bash-parse-options
 ## Description:   
 Processes short and long options with or without arguments.
